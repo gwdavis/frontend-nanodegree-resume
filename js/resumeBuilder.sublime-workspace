@@ -1,0 +1,628 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"greet",
+				"greetByPeriod"
+			],
+			[
+				"check",
+				"checked_items"
+			],
+			[
+				"cur",
+				"current_items_list"
+			],
+			[
+				"Items",
+				"Items"
+			],
+			[
+				"rest",
+				"restaurant_id"
+			],
+			[
+				"res",
+				"restaurant_id"
+			],
+			[
+				"input",
+				"input_username"
+			],
+			[
+				"erro",
+				"error_email"
+			],
+			[
+				"error_",
+				"error_pwd_match"
+			],
+			[
+				"redirect",
+				"redirect_url"
+			],
+			[
+				"get_team",
+				"get_current_season_teams_for_rower_id"
+			],
+			[
+				"new_",
+				"new_rower"
+			],
+			[
+				"get_curr",
+				"get_current_season_teams_for_rower_id"
+			],
+			[
+				"get_rower",
+				"get_rower_from_rower_id"
+			],
+			[
+				"season",
+				"seasonSummary"
+			],
+			[
+				"new_row",
+				"new_rowed_regattas"
+			],
+			[
+				"new",
+				"new_rower"
+			],
+			[
+				"current",
+				"current_season"
+			],
+			[
+				"tr",
+				"tr	Tag"
+			],
+			[
+				"remove_season",
+				"remove_season_from_rower"
+			],
+			[
+				"get",
+				"get_season_from_season_id"
+			],
+			[
+				"rower_id",
+				"get_rower_from_rower_id"
+			],
+			[
+				"rower",
+				"rower_id"
+			],
+			[
+				"get_all",
+				"get_all_regattas"
+			],
+			[
+				"db",
+				"db_helper"
+			],
+			[
+				"rowed",
+				"rowedregattas"
+			],
+			[
+				"Rower",
+				"Rowers"
+			],
+			[
+				"UP",
+				"UPLOAD_FOLDER"
+			],
+			[
+				"rowerregatt",
+				"rowerregattas"
+			],
+			[
+				"match",
+				"matches_by_player"
+			],
+			[
+				"opponent",
+				"opponentPoints"
+			],
+			[
+				"long",
+				"long_match_list"
+			],
+			[
+				"opp",
+				"opponent"
+			],
+			[
+				"player",
+				"playerid"
+			],
+			[
+				"repo",
+				"reportMatch"
+			],
+			[
+				"regatta",
+				"regatta_id"
+			],
+			[
+				"Seasons",
+				"Seasons"
+			],
+			[
+				"Rowers",
+				"Rowers"
+			],
+			[
+				"__",
+				"__tablename__"
+			],
+			[
+				"declar",
+				"declarative_base"
+			],
+			[
+				"T",
+				"True"
+			],
+			[
+				"edit",
+				"editRegatta"
+			],
+			[
+				"th",
+				"this	<?php $this->… ?>"
+			],
+			[
+				"rowinghiso",
+				"rowinghistoryregattas"
+			],
+			[
+				"restaur",
+				"restaurant"
+			],
+			[
+				"updateRestaurant",
+				"updateRestaurantName"
+			],
+			[
+				"restau",
+				"restaurant"
+			],
+			[
+				"restaurant",
+				"restaurantList"
+			],
+			[
+				"restu",
+				"restaurants"
+			],
+			[
+				"sed",
+				"send_header"
+			],
+			[
+				"resta",
+				"restaurants"
+			],
+			[
+				"BaseHTTP",
+				"BaseHTTPRequestHandler"
+			],
+			[
+				"long_",
+				"long_match_list_view"
+			],
+			[
+				"Swi",
+				"swissPairings"
+			],
+			[
+				"pla",
+				"player_name"
+			],
+			[
+				"pr",
+				"previousMatch"
+			],
+			[
+				"fet",
+				"fetchone"
+			],
+			[
+				"pl",
+				"players"
+			],
+			[
+				"register",
+				"registerPlayer"
+			],
+			[
+				"P",
+				"P_Id"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 267.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			],
+			[
+				"package control",
+				"Package Control: Discover Packages"
+			],
+			[
+				"package control in",
+				"Package Control: Install Package"
+			],
+			[
+				"snipp",
+				"Snippet: For Loop"
+			],
+			[
+				"snip",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"clear",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/garydavis/Dropbox/Tax 2014/Business Expense/Business Expense - README",
+		"/Users/garydavis/Dropbox/Tax 2014/Commitment Amounts for CCPI and CEFOF",
+		"/Users/garydavis/Desktop/fullstack/Scalable_Apps/00_Conference_Central/settings.py",
+		"/Users/garydavis/Desktop/fullstack/Scalable_Apps/00_Conference_Central/models.py",
+		"/Users/garydavis/Desktop/fullstack/Scalable_Apps/00_Conference_Central/conference.py",
+		"/Users/garydavis/Desktop/fullstack/Scalable_Apps/00_Conference_Central/app.yaml",
+		"/Users/garydavis/Desktop/fullstack/Scalable_Apps/00_Conference_Central/README.md",
+		"/Users/garydavis/Desktop/fullstack/Scalable_Apps/helloworld_api.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/app.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/db_helper.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-many-2-many-example/app.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-many-2-many-example/test.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-many-2-many-example/db_populate.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-simple-example/templates/deleteItems.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-simple-example/templates/items.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-simple-example/app.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-simple-example/database_setup.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-simple-example/database_populate.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-simple-example/db_helper.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-example/app.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-example/database_populate.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-example/templates/regattas.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-example/templates/editrestaurant.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/rowerprofile.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-example/templates/restaurantprofile.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/tournament/tournament.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/tournament/readme.md",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-example/templates/rowerprofile.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/database_setup.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/database_populate.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-example/database_setup.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-example/templates/editrower.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-example/templates/base.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/checkbox-example/db_helper.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/editrower.html",
+		"/Users/garydavis/Desktop/appengine-try-python-flask/helloworld.py",
+		"/Users/garydavis/Desktop/webapp2/app.yaml",
+		"/Users/garydavis/Desktop/webapp2/signup.py",
+		"/Users/garydavis/Desktop/appengine-try-python-flask/app.yaml",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/seasons.html",
+		"/Users/garydavis/Desktop/appengine-try-python-flask/form.html",
+		"/Users/garydavis/Desktop/appengine-try-python-flask/appengine_config.py",
+		"/Users/garydavis/Desktop/appengine-try-python-flask/main.py",
+		"/Users/garydavis/Desktop/Temp/udacityweb.html",
+		"/Users/garydavis/Desktop/Temp/Hello-Udacity2/main.py",
+		"/Users/garydavis/Downloads/appengine-try-python-flask/main.py",
+		"/Users/garydavis/Downloads/appengine-try-python-flask/main.pyc",
+		"/Users/garydavis/Downloads/appengine-try-python-flask/app.yaml",
+		"/Users/garydavis/Desktop/appengine-try-python-flask/appengine-try-python-flask.yaml",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/deleterower.html",
+		"/Users/garydavis/Desktop/Temp/Max Menu/app.py",
+		"/Users/garydavis/Desktop/Temp/MaxMenu/database_setup.py",
+		"/Users/garydavis/Desktop/Temp/Max Menu/menu.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/.gitignore",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/readme.md",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/ipython.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/addrower.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/editregatta.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/editseason.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/addregatta.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/addseason.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/deleteseason.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/deleteregatta.html",
+		"/Users/garydavis/Desktop/temprowing/rowingroster/app.py",
+		"/Users/garydavis/Desktop/temprowing/rowingroster/.git/COMMIT_EDITMSG",
+		"/Users/garydavis/Desktop/temprowing/rowingroster/requirements.txt",
+		"/Users/garydavis/Desktop/temprowing/rowingroster/Procfile",
+		"/Users/garydavis/Desktop/tempheroku/hello.py",
+		"/Users/garydavis/Desktop/tempheroku/Procfile",
+		"/Users/garydavis/Desktop/tempheroku/.gitignore",
+		"/Users/garydavis/Desktop/temprowing/rowingroster/procfile.txt",
+		"/Users/garydavis/Desktop/OAuthtemp/flask-oauth-example/app.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/requirements.txt",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/readme_template.md",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/rowingteam.db-journal",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/database_setup_new.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/rowing.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/base.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/oauth.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/flask-oauth-example-master/app.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/flask-oauth-example-master/templates/index.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/index.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/flask-oauth-example-master/oauth.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/flask-oauth-example-master/oauth.pyc",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/max/main.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/max/templates/restaurants.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/max/templates/newrestaurant.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/max/templates/menu.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/max/templates/editmenuitem.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/max/menu.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/templates/menu.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/dashboard.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/regatta.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/regattas.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/roster.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/seasonsummary.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/static/css/custom.css",
+		"/Users/garydavis/Downloads/Full-Stack-Foundations-master/Lesson-4/Final-Project/static/styles.css",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/rowingteam.db",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/static/css/styles.css",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/populate_rowing_database.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/temp.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/tournament/tournament_test.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/tournament/tournament.sql",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/populate_rowing_db.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project/project.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project/lotsofmenus.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project/database_setup.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project/templates/menu.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project/templates/editmenuitem.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/database_setup_backup.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project/restaurantmenu.db",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/deleterowerprofile.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/rowing/templates/rowerprofile copy.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project/templates/newmenuitem.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project/static/styles.css",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/lotsofmenus.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project/project_newest.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/database_setup.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project/project_newest",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/static/style.css",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/templates/menu_old.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/templates/deletemenuitem.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/templates/editmenuitem.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/templates/deletemenuitem_temp.html",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/project_new.py",
+		"/Users/garydavis/Desktop/fullstack/vagrant/FSFoundations/templates/newmenuitem.html"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"package",
+			"ProfileForm",
+			"ProfileForm()",
+			"restaurant",
+			"playerStandings",
+			"href",
+			"rower",
+			"create_engine",
+			"items",
+			"get_first",
+			"print",
+			"redirect_url",
+			"index",
+			"flash",
+			"get_all_rowers",
+			"Houston",
+			"currentseason",
+			"base",
+			"session",
+			"currentteam",
+			"rowedregattas",
+			"delete",
+			"for rr in rower.regatta:",
+			"currentteam",
+			"rowed",
+			"rowerteams",
+			"long_match_list",
+			"currentseason",
+			"editRegatta",
+			"create_engine",
+			"directions",
+			"MenuID",
+			"id",
+			"print",
+			"Player_name"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"matches_by_player",
+			"weblink",
+			"link",
+			"menu_id",
+			"player_name",
+			"L  JLAKSJDF L;AKJ"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "resumeBuilder.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 189.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
