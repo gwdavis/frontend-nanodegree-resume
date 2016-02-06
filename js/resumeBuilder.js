@@ -19,12 +19,12 @@ This is empty on purpose! Your code to build the resume will go here.
  	{"title" : "Consultant",
  	"employer" : "Self",
  	"dates" : "2015-Present",
- 	"location" : "New York",
+ 	"location" : "New York, NY",
  	"description" : ""},
  	{"title" : "Managing Director",
  	"employer" : "Royal Bank of Scotland",
  	"dates" : "2010-2015",
- 	"location" : "Stamford",
+ 	"location" : "Stamford, CT",
  	"description" : ""}
  	]
  }
@@ -57,10 +57,10 @@ This is empty on purpose! Your code to build the resume will go here.
  var projects = {
  	"projects" : [
  	{
- 		"title" : "",
- 		"date" : "",
- 		"description" : "",
- 		"image" : ""
+ 		"title" : "Project 1",
+ 		"dates" : "2015",
+ 		"description" : "some full-stack project",
+ 		"image" : "images/RowingRegattaApp.png"
  	}
  	]
  }
@@ -79,7 +79,7 @@ if(bio.skills.length > 0){
  	}
  }
 
-function displayWork(){
+work.display = function (){
  	if(work.jobs.length > 0){
  	// console.log(work.jobs.length)
 	 	for (i in work.jobs){
@@ -97,9 +97,49 @@ function displayWork(){
  		}
  	}
 }
-displayWork()
+work.display()
 
+projects.display = function(){
+	if(projects.projects.length >0){
+		console.log(projects.projects.length);
+		for (i in projects.projects){
+			$('#projects').append(HTMLprojectStart);
+			var formattedProjectsTitle = HTMLprojectTitle.replace('%data%', projects.projects[i].title);
+			var formattedProjectsDates = HTMLprojectDates.replace('%data%', projects.projects[i].dates);
+			var formattedProjectsDescription = HTMLprojectDescription.replace('%data%', projects.projects[i].description);
+			var formattedProjectsImage = HTMLprojectImage.replace('%data%', projects.projects[i].image);
+			$('.project-entry:last').append(formattedProjectsTitle);
+			$('.project-entry:last').append(formattedProjectsDates);
+			$('.project-entry:last').append(formattedProjectsDescription);
+			$('.project-entry:last').append(formattedProjectsImage);
+		}
+	}
+}
+projects.display()
 
+function displayMap(){
+	$('#mapDiv').append(googleMap);
+}
+displayMap();
+
+/* Internationalize Names
+Includes a button from helper.js and a function that capitalizes the last name
+*/
+
+$("#Main").append(internationalizeButton);
+
+function inName (name) {
+	// Splits a two word name, capitalizing the first name and putting second name in all caps
+	var splitName = name.trim().split(" ");
+	//first name to lowercase and first letter in caps
+	var fname = splitName[0][0].toUpperCase() + splitName[0].slice(1).toLowerCase()
+	//last name to all upper case
+	var lname = splitName[1].toUpperCase();
+	//combine names
+	intName = fname + " " + lname;
+	return intName;
+}
+console.log(inName("gary davis"))
 // Prints out locations worked in work object as passed to the function
 // 
 // function locationizer(work_obj){
