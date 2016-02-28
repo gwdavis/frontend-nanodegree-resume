@@ -156,6 +156,10 @@ ul {
   display: none;
 }
 
+.projectpic {
+  width: 50%;
+}
+
 img {
   padding: 10px;
 }
@@ -174,6 +178,9 @@ span {
   #lets-connect {
     margin-top: 5%;
   }
+  .projectpic {
+    width: 50%;
+  }
 }
 
 @media only screen and (max-width:900px) {
@@ -188,6 +195,9 @@ span {
   }
   .biopic {
     width: 150px;
+  }
+  .projectpic {
+    width: 75%;
   }
   .welcome-message {
     display: none;

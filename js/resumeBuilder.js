@@ -15,6 +15,8 @@ This is empty on purpose! Your code to build the resume will go here.
  };
 
  var work = {
+
+ };
  	"jobs" : [
  	{"title" : "Consultant",
  	"employer" : "Self",
@@ -78,6 +80,9 @@ if(bio.skills.length > 0){
  		$("#skills").append(formattedSkills)
  	}
  }
+};
+var cntlr = {
+	
 
 work.display = function (){
  	if(work.jobs.length > 0){
