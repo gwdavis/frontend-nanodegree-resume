@@ -1,46 +1,54 @@
 /*
-This is empty on purpose! Your code to build the resume will go here.
- */
+ resumeBuilder.js
+ contains the JSON with the data to publish
+ and the display methods
+by Gary W. Davis
+*/
  
  var bio = {
  	"name" : "Gary W. Davis",
  	"role" : "Treasurer",
- 	"contact" : {
+ 	"contacts" : {
  		"email" : "gary.davis@davisfamily.com",
+ 		"location": "New York, NY",
  		"phone" : "+1-914-419-9788"
  	},
  	"cell" : "+1-914-419-9788",
  	"photo" : "http://s.gravatar.com/avatar/2c4d8d5e413f44946391fc134d28e04a?s=80",
-	"skills" : ["Derivatives", "Structured Credit Products"]
+	"skills" : ["WordPress", "Python"]
  };
 
  var work = {
  	"jobs" : [
- 	{"title" : "Consultant",
- 	"employer" : "Self",
- 	"dates" : "2015-Present",
- 	"location" : "New York, NY",
- 	"description" : ""},
- 	{"title" : "Managing Director",
- 	"employer" : "Royal Bank of Scotland",
- 	"dates" : "2010-2015",
- 	"location" : "Stamford, CT",
- 	"description" : ""}
+ 	{
+ 		"title" : "Consultant",
+	 	"employer" : "Self",
+	 	"dates" : "2013-Present",
+	 	"location" : "New York, NY",
+	 	"description" : ""
+	 },
+ 	{
+ 		"title" : "Managing Director",
+	 	"employer" : "Royal Bank of Scotland",
+	 	"dates" : "2010-2013",
+	 	"location" : "Stamford, CT",
+	 	"description" : ""
+	 }
  	]
- }
+ };
 
  var education = {
- 	"school" : [
+ 	"schools" : [
  	{
  		"name" : "Harvard Business School",
- 		"city" : "Cambridge, MA",
+ 		"location" : "Cambridge, MA",
  		"degree" : "MBA",
  		"year" : "1987",
  		"url" : ""
  	},
  	{
  		"name" : "Queen's University",
- 		"city" : "Kingston, ON",
+ 		"location" : "Kingston, ON",
  		"degree" : "B.Sc. Mining",
  		"years" : "1979",
  		"url" : ""
@@ -52,9 +60,11 @@ This is empty on purpose! Your code to build the resume will go here.
  		"school": "",
  		"dates" : "",
  		"url" : ""
- 	}]}
+ 	}
+ 	]
+ };
 
- var projects = {
+var projects = {
  	"projects" : [
  	{
  		"title" : "Project 1",
@@ -63,21 +73,24 @@ This is empty on purpose! Your code to build the resume will go here.
  		"image" : "images/RowingRegattaApp.png"
  	}
  	]
- }
+};
 
-var formattedName = HTMLheaderName.replace("%data%",bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+bio.display = function(){
+	var formattedName = HTMLheaderName.replace("%data%",bio.name);
+	var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
+	var formattedBioPic = HTMLbioPic.replace('%data%',bio.photo);
+	$("#header").prepend(formattedRole);
+	$("#header").prepend(formattedName);
+	$('#header').prepend(formattedBioPic);
 
-if(bio.skills.length > 0){
- 	
- 	$("#header").append(HTMLskillsStart);
- 	for (i in bio.skills){
- 		var formattedSkills = HTMLskills.replace("%data%",bio.skills[i]);
- 		$("#skills").append(formattedSkills)
- 	}
- }
+	if(bio.skills.length > 0){
+	 	$("#header").append(HTMLskillsStart);
+	 	for (i in bio.skills){
+	 		var formattedSkills = HTMLskills.replace("%data%",bio.skills[i]);
+	 		$("#skills").append(formattedSkills)
+	 	}
+	}
+};
 
 work.display = function (){
  	if(work.jobs.length > 0){
@@ -96,8 +109,7 @@ work.display = function (){
 	 		$(".work-entry:last").append(formattedWorkDescription)
  		}
  	}
-}
-work.display()
+};
 
 projects.display = function(){
 	if(projects.projects.length >0){
@@ -114,19 +126,12 @@ projects.display = function(){
 			$('.project-entry:last').append(formattedProjectsImage);
 		}
 	}
-}
-projects.display()
+};
 
-function displayMap(){
-	$('#mapDiv').append(googleMap);
-}
-displayMap();
 
 /* Internationalize Names
 Includes a button from helper.js and a function that capitalizes the last name
 */
-
-$("#Main").append(internationalizeButton);
 
 function inName (name) {
 	// Splits a two word name, capitalizing the first name and putting second name in all caps
@@ -138,8 +143,9 @@ function inName (name) {
 	//combine names
 	intName = fname + " " + lname;
 	return intName;
-}
-console.log(inName("gary davis"))
+};
+
+
 // Prints out locations worked in work object as passed to the function
 // 
 // function locationizer(work_obj){
@@ -159,5 +165,12 @@ console.log(inName("gary davis"))
 //   var y = loc.pageY;
 //   logClicks(x,y);
 // });
+//////////////////////////////////MAIN////////////////////////////////////////
+bio.display();
+work.display();
+projects.display();
+$("#Main").append(internationalizeButton);
+$('#mapDiv').append(googleMap);
+console.log(inName("gary davis"));
 
  

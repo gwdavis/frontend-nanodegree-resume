@@ -248,10 +248,29 @@
 	"buffers":
 	[
 		{
+			"contents": "/*\n resumeBuilder.js\n contains the JSON with the data to publish\n and the display methods\nby Gary W. Davis\n*/\n \n var bio = {\n 	\"name\" : \"Gary W. Davis\",\n 	\"role\" : \"Treasurer\",\n 	\"contacts\" : {\n 		\"email\" : \"gary.davis@davisfamily.com\",\n 		\"location\": \"New York, NY\",\n 		\"phone\" : \"+1-914-419-9788\"\n 	},\n 	\"cell\" : \"+1-914-419-9788\",\n 	\"photo\" : \"http://s.gravatar.com/avatar/2c4d8d5e413f44946391fc134d28e04a?s=80\",\n	\"skills\" : [\"WordPress\", \"Python\"]\n };\n\n var work = {\n 	\"jobs\" : [\n 	{\n 		\"title\" : \"Consultant\",\n	 	\"employer\" : \"Self\",\n	 	\"dates\" : \"2013-Present\",\n	 	\"location\" : \"New York, NY\",\n	 	\"description\" : \"\"\n	 },\n 	{\n 		\"title\" : \"Managing Director\",\n	 	\"employer\" : \"Royal Bank of Scotland\",\n	 	\"dates\" : \"2010-2013\",\n	 	\"location\" : \"Stamford, CT\",\n	 	\"description\" : \"\"\n	 }\n 	]\n };\n\n var education = {\n 	\"schools\" : [\n 	{\n 		\"name\" : \"Harvard Business School\",\n 		\"location\" : \"Cambridge, MA\",\n 		\"degree\" : \"MBA\",\n 		\"year\" : \"1987\",\n 		\"url\" : \"\"\n 	},\n 	{\n 		\"name\" : \"Queen's University\",\n 		\"location\" : \"Kingston, ON\",\n 		\"degree\" : \"B.Sc. Mining\",\n 		\"years\" : \"1979\",\n 		\"url\" : \"\"\n 	}\n 	],\n 	\"onlineCourses\" : [\n 	{\n 		\"title\" : \"\",\n 		\"school\": \"\",\n 		\"dates\" : \"\",\n 		\"url\" : \"\"\n 	}\n 	]\n };\n\nvar projects = {\n 	\"projects\" : [\n 	{\n 		\"title\" : \"Project 1\",\n 		\"dates\" : \"2015\",\n 		\"description\" : \"some full-stack project\",\n 		\"image\" : \"images/RowingRegattaApp.png\"\n 	}\n 	]\n};\n\nbio.display = function(){\n	var formattedName = HTMLheaderName.replace(\"%data%\",bio.name);\n	var formattedRole = HTMLheaderRole.replace(\"%data%\",bio.role);\n	var formattedBioPic = HTMLbioPic.replace('%data%',bio.photo);\n	$(\"#header\").prepend(formattedRole);\n	$(\"#header\").prepend(formattedName);\n	$('#header').prepend(formattedBioPic);\n\n	if(bio.skills.length > 0){\n	 	$(\"#header\").append(HTMLskillsStart);\n	 	for (i in bio.skills){\n	 		var formattedSkills = HTMLskills.replace(\"%data%\",bio.skills[i]);\n	 		$(\"#skills\").append(formattedSkills)\n	 	}\n	}\n};\n\nwork.display = function (){\n 	if(work.jobs.length > 0){\n 	// console.log(work.jobs.length)\n	 	for (i in work.jobs){\n	 		$(\"#workExperience\").append(HTMLworkStart);\n	 		var formattedWorkEmployer = HTMLworkEmployer.replace(\"%data%\",work.jobs[i].employer);\n	 		var formattedWorkTitle = HTMLworkTitle.replace(\"%data%\",work.jobs[i].title);\n	 		var formattedWorkEmployerTitle = formattedWorkEmployer + formattedWorkTitle\n	 		var formattedWorkDescription = HTMLworkDescription.replace(\"%data%\",work.jobs[i].description)\n	 		var formattedWorkLocation = HTMLworkLocation.replace(\"%data%\",work.jobs[i].location)\n	 		var formattedWorkDates = HTMLworkDates.replace(\"%data%\",work.jobs[i].dates)\n	 		$(\".work-entry:last\").append(formattedWorkEmployerTitle)\n	 		$(\".work-entry:last\").append(formattedWorkLocation)\n	 		$(\".work-entry:last\").append(formattedWorkDates)\n	 		$(\".work-entry:last\").append(formattedWorkDescription)\n 		}\n 	}\n};\n\nprojects.display = function(){\n	if(projects.projects.length >0){\n		console.log(projects.projects.length);\n		for (i in projects.projects){\n			$('#projects').append(HTMLprojectStart);\n			var formattedProjectsTitle = HTMLprojectTitle.replace('%data%', projects.projects[i].title);\n			var formattedProjectsDates = HTMLprojectDates.replace('%data%', projects.projects[i].dates);\n			var formattedProjectsDescription = HTMLprojectDescription.replace('%data%', projects.projects[i].description);\n			var formattedProjectsImage = HTMLprojectImage.replace('%data%', projects.projects[i].image);\n			$('.project-entry:last').append(formattedProjectsTitle);\n			$('.project-entry:last').append(formattedProjectsDates);\n			$('.project-entry:last').append(formattedProjectsDescription);\n			$('.project-entry:last').append(formattedProjectsImage);\n		}\n	}\n};\n\n\n/* \nInternationalize Names\nIncludes a button from helper.js and a function that capitalizes the last name\nSplits a two word name, capitalizing the first letter of the first name and lower cases the rest \nand puts second name into all caps\n*/\n\nfunction inName (name) {\n	\n	var splitName = name.trim().split(\" \");  //removes spaces before and after and splits into two names\n	var fname = splitName[0][0].toUpperCase() + splitName[0].slice(1).toLowerCase()\n	var lname = splitName[1].toUpperCase();\n	intName = fname + \" \" + lname;\n	return intName;\n};\n\n\n// Prints out locations worked in work object as passed to the function\n// \n// function locationizer(work_obj){\n// 	var locationsArray = []\n// 	for (i in work_obj){\n// 		var workLocations = work_obj[i].location\n// 		locationsArray.push(workLocations)\n// 	}\n// 	return locationsArray\n// }\n\n\n// Prints to the log the location of clicks on the page\n// \n// $(document).click(function(loc) {\n//   var x = loc.pageX;\n//   var y = loc.pageY;\n//   logClicks(x,y);\n// });\n\n//////////////////////////////////MAIN////////////////////////////////////////\n\nbio.display();\nwork.display();\nprojects.display();\n$(\"#Main\").append(internationalizeButton);\n$('#mapDiv').append(googleMap);\nconsole.log(inName(\"gary davis\"));\n\n ",
 			"file": "js/resumeBuilder.js",
+			"file_size": 4971,
+			"file_write_time": 130993315490000000,
 			"settings":
 			{
-				"buffer_size": 2119,
+				"buffer_size": 4978,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/helper.js",
+			"settings":
+			{
+				"buffer_size": 8956,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 4964,
 				"line_ending": "Unix"
 			}
 		}
@@ -337,6 +356,11 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/garydavis/Desktop/Udacity-Javascript/Udacity-Course Work/frontend-nanodegree-resume/css",
+		"/Users/garydavis/Desktop/Udacity-Javascript/Udacity-Course Work/frontend-nanodegree-resume/js"
+	],
 	"file_history":
 	[
 		"/Users/garydavis/Desktop/Udacity-Javascript/Class Work/frontend-nanodegree-resume/js/resumeBuilder.sublime-workspace",
@@ -470,7 +494,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -484,6 +508,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"HTMLbioPic",
 			"package",
 			"ProfileForm",
 			"ProfileForm()",
@@ -551,26 +576,87 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2119,
+						"buffer_size": 4978,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								4270,
+								4270
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/helper.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8956,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3464,
+								3464
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2151.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1847,
+								1847
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 516.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
