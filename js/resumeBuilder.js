@@ -65,7 +65,7 @@ var model = {
  	]
  },
 
-	projects: {
+
  	"projects" : [
  	{
  		"title" : "Project 1",
@@ -74,7 +74,6 @@ var model = {
  		"image" : "images/RowingRegattaApp.png"
  	}
  	]
-	}
 };
 
 var cntlr = {
@@ -126,10 +125,27 @@ var cntlr = {
 		//combine names
 		intName = fname + " " + lname;
 		return intName;
+	},
+
+
+	getProjects: function() {
+		if(model.projects.length >0){
+			var projects = [];
+			for (var i=0; i<model.projects.length; i++) {
+				project = {};
+				project.formattedProjectsTitle = HTMLprojectTitle.replace('%data%', model.projects[i].title);
+				project.formattedProjectsDates = HTMLprojectDates.replace('%data%', model.projects[i].dates);
+				project.formattedProjectsDescription = HTMLprojectDescription.replace('%data%', 				   			model.projects[i].description);
+				project.formattedProjectsImage = HTMLprojectImage.replace('%data%', model.projects[i].image);
+				projects.push(project);
+			}
+			return projects;
+		}
 	}
-
-
-//
+	
+		
+	
+	
 //projects.display = function(){
 //	if(projects.projects.length >0){
 //		console.log(projects.projects.length);
@@ -146,8 +162,8 @@ var cntlr = {
 //		}
 //	}
 
-//
-//
+
+
 
 };
 
@@ -165,6 +181,7 @@ var view = {
 			$("#skills").append(formattedSkills);
 		}
 	},
+	
 	displayWork: function() {
 		if(cntlr.getWork().length > 0){
 			for (var i=0; i< cntlr.getWork().length; i++){
@@ -175,7 +192,19 @@ var view = {
 				$(".work-entry:last").append(cntlr.getWork()[i].formattedWorkDescription)
 			}
 		}
-	}
+	},
+	
+	displayProjects: function() {
+		if(cntlr.getProjects().length >0){
+			for (var i=0; i<cntlr.getProjects().length; i++) {
+				$('#projects').append(HTMLprojectStart);
+				$('.project-entry:last').append(cntlr.getProjects()[i].formattedProjectsTitle);
+				$('.project-entry:last').append(cntlr.getProjects()[i].formattedProjectsDates);
+				$('.project-entry:last').append(cntlr.getProjects()[i].formattedProjectsDescription);
+				$('.project-entry:last').append(cntlr.getProjects()[i].formattedProjectsImage);
+			}
+		}	
+	}	
 	
 };
 
@@ -202,9 +231,11 @@ var view = {
 //////////////////////////////////MAIN////////////////////////////////////////
 view.displayBio();
 view.displayWork();
+view.displayProjects();
 //projects.display();
 $("#Main").append(internationalizeButton);
 //$('#mapDiv').append(googleMap);
 console.log(cntlr.inName("gary davis"));
 
- 
+ // to include the map function... need to add cntlr calls in helper.js
+
